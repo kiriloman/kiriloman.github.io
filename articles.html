@@ -1,11 +1,23 @@
 ---
-layout: default
+layout: articles_layout
 ---
+
+<div class="menu">
+  <div>
+    <a href="{{ site.path }}/studyhub.html">
+     <button class="menu-button">studyhub</button>
+    </a>
+    <a href="{{ site.path }}/articles.html">
+     <button class="menu-button">articles</button>
+    </a>
+  </div>
+</div>
+
 {% for post in site.categories.Article %}
   <ul>
     <article class='post'>
         <h1 class='post-title'>
-          <a href="{{ site.url }}{{ post.url }}">
+          <a href="{{ site.url }}{{ post.url }}" target="_blank">
             {{ post.title }}
           </a>
         </h1>

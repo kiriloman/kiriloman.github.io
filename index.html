@@ -1,27 +1,18 @@
 ---
 layout: default
 ---
+
 <div>
-  <a href="{{ site.path }}/whoami.html">
-   <button>whoami</button>
-  </a>
-  <a href="{{ site.path }}/studyhub.html">
-   <button>studyhub</button>
-  </a>
-  <a href="{{ site.path }}/articles.html">
-   <button>articles</button>
-  </a>
+  <div class="menu">
+    <a href="{{ site.path }}/studyhub.html">
+     <button class="menu-button">studyhub</button>
+    </a>
+    <a href="{{ site.path }}/articles.html">
+     <button class="menu-button">articles</button>
+    </a>
+  </div>
 </div>
 
-{% for post in site.categories.Video %}
-  <ul>
-    <article class='post'>
-        <h1 class='post-title'>
-          <a href="{{ site.url }}{{ post.url }}">
-            {{ post.title }}
-          </a>
-        </h1>
-        <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
-        {{ post.content }}
-  </ul>
-{% endfor %}
+<p>
+  I write code that does things for me so I have more time to procrastinate.    
+</p>
