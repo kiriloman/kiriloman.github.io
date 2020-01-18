@@ -1,3 +1,30 @@
 ---
 layout: default
 ---
+
+<div>
+    <div class="menu">
+        <a href="{{ site.path }}/studyhub.html">
+        <button class="menu-button">studyhub</button>
+        </a>
+        <a href="{{ site.path }}/articles.html">
+        <button class="menu-button">articles</button>
+        </a>
+    </div>
+
+    <div class="posts">
+        {% for post in site.categories.Video %}
+        <ul>
+            <article class='post'>
+                <h1 class='post-title'>
+                <a href="{{ site.url }}{{ post.url }}">
+                    {{ post.title }}
+                </a>
+                </h1>
+                <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+                {{ post.content }}
+        </ul>
+        {% endfor %}
+    </div>
+</div>
+  
