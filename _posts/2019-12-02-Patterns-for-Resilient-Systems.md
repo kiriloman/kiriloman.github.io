@@ -1,5 +1,6 @@
 ---
 title: "Patterns for Resilient Software Systems"
+categories: [Video]
 ---
 
 ### Patterns for building resilient software systems • Adrian Hornsby

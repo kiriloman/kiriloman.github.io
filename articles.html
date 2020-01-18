@@ -1,3 +1,14 @@
 ---
 layout: default
 ---
+{% for post in site.categories.Article %}
+  <ul>
+    <article class='post'>
+        <h1 class='post-title'>
+          <a href="{{ site.url }}{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+        <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+  </ul>
+{% endfor %}
