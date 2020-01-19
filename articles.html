@@ -21,6 +21,12 @@ layout: articles_layout
             {{ post.title }}
           </a>
         </h1>
-        <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+        <div class="post-metadata">
+          {{ post.date | date: "%b %-d, %Y" }} &middot; {{ post.author }}
+        </div>
+        <a href="{{ site.url }}{{ post.url }}" target="_blank">
+          <img class="article_image" src="{{post.img_url}}">
+        </a>
+    </article>
   </ul>
 {% endfor %}
