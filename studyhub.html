@@ -17,11 +17,13 @@ layout: default
         <ul>
             <article class='post'>
                 <h1 class='post-title'>
-                <a href="{{ site.url }}{{ post.url }}">
-                    {{ post.title }}
-                </a>
+                    <a href="{{ site.url }}{{ post.url }}">
+                        {{ post.title }}
+                    </a>
                 </h1>
-                <div class="post-date">{{ post.date | date: "%b %-d, %Y" }}</div>
+                <div class="post-metadata">
+                    {{ post.date | date: "%b %-d, %Y" }} &middot; {{ post.author }}
+                </div>
                 {{ post.content }}
         </ul>
         {% endfor %}
